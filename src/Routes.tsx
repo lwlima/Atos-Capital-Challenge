@@ -1,12 +1,12 @@
-import { Route, Routes as Switch } from 'react-router-dom';
+import { Navigate, Route, Routes as Switch } from 'react-router-dom';
 
 import { Login } from './pages/Auth/Login';
 import { SignUp } from './pages/Auth/SignUp';
 import { Products } from './pages/products/Products';
-import { RegisterProduct } from './pages/products/RegisterProduct';
-import { NotFound } from './pages/NotFound';
+import { CreateProduct } from './pages/products/CreateProduct';
 import { AuthLayout } from './layouts/AuthLayout';
 import { AppLayout } from './layouts/AppLayout';
+import { NotFound } from './pages/NotFound';
 
 export default function Routes() {
   return (
@@ -18,9 +18,10 @@ export default function Routes() {
 
       <Route element={<AppLayout />}>
         <Route path="/products" element={<Products />} />
-        <Route path="/register-product" element={<RegisterProduct />} />
+        <Route path="/new-product" element={<CreateProduct />} />
       </Route>
 
+      <Route path="*" element={<Navigate to="/not-found" replace />} />
       <Route path="/not-found" element={<NotFound />} />
     </Switch>
   );
