@@ -8,6 +8,7 @@
 - [x] Deletar produto
 - [ ] Editar produto
 - [x] Pesquisa na lista de produtos por categoria
+- [x] Validação de formulário e tratamento de erros
 
 ### Passo a passo para executar
 1. Clonar o projeto
